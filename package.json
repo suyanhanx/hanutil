@@ -1,0 +1,26 @@
+{
+  "name": "utils",
+  "description": "common utils",
+  "version": "1.0.0",
+  "author": "suyan",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.1"
+  }
+}
