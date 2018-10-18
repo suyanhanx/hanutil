@@ -1,3 +1,7 @@
+/**
+ * 深度克隆一个对象
+ */
+
 import deepAssign from './deepAssign'
 
 export default function deepClone(obj) {

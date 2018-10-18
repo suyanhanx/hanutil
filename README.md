@@ -8,7 +8,7 @@
 
 ```bash
 # install dependencies
-npm install
+yarn
 
 # build for production with minification
 npm run build

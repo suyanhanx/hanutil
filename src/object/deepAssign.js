@@ -1,13 +1,20 @@
+/*
+一个将两个对象深度合并的函数
+*/
+
+
 import isDef from './isDef'
 
-const { hasOwnProperty } = Object.prototype
+const {
+  hasOwnProperty
+} = Object.prototype
 
-function isObj (x) {
+function isObj(x) {
   const type = typeof x
   return x !== null && (type === 'object' || type === 'function')
 }
 
-function assignKey (to, from, key) {
+function assignKey(to, from, key) {
   const val = from[key]
 
   if (!isDef(val) || (hasOwnProperty.call(to, key) && !isDef(to[key]))) {
@@ -21,7 +28,7 @@ function assignKey (to, from, key) {
   }
 }
 
-export default function assign (to, ...args) {
+export default function assign(to, ...args) {
   args.forEach(item => {
     for (const key in item) {
       if (hasOwnProperty.call(item, key)) {
