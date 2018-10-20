@@ -1,12 +1,18 @@
 {
-  "name": "utils",
+  "name": "hanutils",
   "description": "common utils",
-  "version": "1.0.0",
-  "author": "han",
+  "version": "0.0.1",
+  "author": "suyan",
   "license": "MIT",
-  "private": true,
+  "main": "./dist/utils.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suyanhanx/hanutils.git"
+  },
+  "homepage": "https://github.com/suyanhanx/hanutils",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "bundle": "webpack --mode=development --progress --hide-modules",
+    "build": "cross-env NODE_ENV=production webpack --mode=production --progress --hide-modules"
   },
   "dependencies": {},
   "browserslist": [
