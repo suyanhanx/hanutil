@@ -1,15 +1,16 @@
 {
-  "name": "hanutils",
-  "description": "common utils",
+  "name": "hanutil",
+  "description": "A JavaScript common utils",
   "version": "0.0.1",
   "author": "suyan",
   "license": "MIT",
   "main": "./dist/utils.min.js",
+  "module": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/suyanhanx/hanutils.git"
+    "url": "https://github.com/suyanhanx/hanutil.git"
   },
-  "homepage": "https://github.com/suyanhanx/hanutils",
+  "homepage": "https://github.com/suyanhanx/hanutil",
   "scripts": {
     "bundle": "webpack --mode=development --progress --hide-modules",
     "build": "cross-env NODE_ENV=production webpack --mode=production --progress --hide-modules"
@@ -29,5 +30,8 @@
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
