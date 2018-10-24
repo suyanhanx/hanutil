@@ -2,6 +2,8 @@ declare namespace hanutil {
   /**
    * array
    */
+  export function arrayEquals(arr1: Array<any>, arr2: Array<any>): boolean
+
   export function convertClass(obj: object): Array<any>
 
   export function isArray(obj: object): boolean
