@@ -10,4 +10,4 @@ r.keys().forEach(key => {
   moduleExports[attr] = r(key).default
 });
 
-export default moduleExports
+module.exports = moduleExports

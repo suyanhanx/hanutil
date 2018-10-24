@@ -4,16 +4,17 @@
   "version": "0.0.2",
   "author": "suyan",
   "license": "MIT",
-  "main": "./dist/utils.min.js",
-  "module": "./src/index.js",
+  "main": "dist/hanutil.min.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/suyanhanx/hanutil.git"
   },
   "homepage": "https://github.com/suyanhanx/hanutil",
   "scripts": {
-    "bundle": "webpack --mode=development --progress --hide-modules",
-    "build": "cross-env NODE_ENV=production webpack --mode=production --progress --hide-modules"
+    "bundle": "cross-env NODE_ENV=development webpack --mode=development --progress --hide-modules",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "test": "yarn build && karma start script/karma.conf.js"
   },
   "dependencies": {},
   "browserslist": [

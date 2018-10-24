@@ -1,13 +1,18 @@
 var path = require('path')
+var pkg = require('./package.json')
+
 var webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'utils.js'
+    filename: `${pkg.name}.min.js`,
+    library: `${pkg.name}`,
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
@@ -34,7 +39,8 @@ module.exports = {
         uglifyOptions: {
           compress: false,
           ecma: 6,
-          mangle: true
+          mangle: true,
+          comment: false
         },
         sourceMap: true
       })
@@ -43,7 +49,6 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.output.filename = 'utils.min.js'
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
