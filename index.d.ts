@@ -22,18 +22,18 @@ declare namespace hanutil {
 
   export function getProperty(obj: object, path: string): object
 
-  export function isDefined(obj: any): boolean
+  export function isDef(obj: any): boolean
 
   export function isEmptyObject(obj: any): boolean
 
   /**
    * validate
    */
-  export function isEmail(str: string): boolean
+  export function isEmail(value: string): boolean
 
-  export function isPhoneNum(str: string): boolean
+  export function isPhoneNum(value: string): boolean
 
-  export function isTaxNum(str: string): boolean
+  export function isTaxNum(value: string): boolean
 }
 
 declare module 'hanutil' {
