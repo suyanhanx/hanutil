@@ -4,7 +4,7 @@ node_js:
 addons:
   chrome: stable
 
-after_success: after_success: CODECLIMATE_REPO_TOKEN=$CODECLIMATE codeclimate < coverage/lcov.info
+after_success: CODECLIMATE_REPO_TOKEN=$CODECLIMATE codeclimate < coverage/lcov.info
 
 before_deploy:
   - yarn build
