@@ -1,7 +1,7 @@
 /**
  * 将 String, Object, Array 转成 Array
  */
-export default function convertClass(classes) {
+ const convertClass = (classes) => {
   let newClasses = []
   if (!classes) return newClasses
   if (classes instanceof Array) {
@@ -15,3 +15,5 @@ export default function convertClass(classes) {
   }
   return newClasses
 }
+
+export default convertClass

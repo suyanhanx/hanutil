@@ -29,15 +29,6 @@ module.exports = function (config) {
           {
             test: /\.js$/,
             use: {
-              loader: 'istanbul-instrumenter-loader',
-              options: { esModules: true }
-            },
-            enforce: 'pre',
-            exclude: /node_modules/
-          },
-          {
-            test: /\.js$/,
-            use: {
               loader: 'babel-loader',
               options: {
                 presets: ['env'],
