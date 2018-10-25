@@ -1,13 +1,13 @@
 language: node_js
 node_js:
   - 8
+addons:
+  chrome: stable
 
-script:
+after_success: after_success: CODECLIMATE_REPO_TOKEN=$CODECLIMATE codeclimate < coverage/lcov.info
+
+before_deploy:
   - yarn build
-branches:
-  only:
-  - master
-
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
