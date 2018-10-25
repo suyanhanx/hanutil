@@ -1,5 +1,3 @@
-var pkg = require('../package')
-
 module.exports = function (config) {
   config.set({
     basePath: '../',
@@ -7,47 +5,14 @@ module.exports = function (config) {
     frameworks: ['mocha', 'power-assert'],
 
     files: [
-      'src/index.js',
+      'dist/*.min.js',
       'test/*.test.js'
     ],
 
     exclude: [],
 
     preprocessors: {
-      'src/index.js': 'webpack'
-    },
-
-    webpack: {
-      devtool: 'inline-source-map',
-      output: {
-        library: pkg.name,
-        libraryTarget: 'umd'
-      },
-      mode: 'development',
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            use: {
-              loader: 'istanbul-instrumenter-loader',
-              options: { esModules: true }
-            },
-            enforce: 'pre',
-            exclude: /node_modules/
-          },
-          {
-            test: /\.js$/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: ['env'],
-                plugins: ['istanbul']
-              }
-            },
-            exclude: /node_modules/
-          }
-        ]
-      }
+      'dist/*.min.js': 'coverage'
     },
 
     reporters: ['mocha', 'coverage'],
