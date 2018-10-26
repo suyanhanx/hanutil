@@ -4,7 +4,7 @@
  * @param delay 延迟
  * @returns {Function}
  */
-export default function throttle(action, delay) {
+const throttle = (action, delay) => {
   let statTime = 0
 
   return function () {
@@ -16,3 +16,5 @@ export default function throttle(action, delay) {
     }
   }
 }
+
+export default throttle

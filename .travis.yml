@@ -1,13 +1,16 @@
 language: node_js
 node_js:
   - 8
+addons:
+  chrome: stable
 
-script:
+after_success:
+  - yarn add codeclimate-test-reporter coveralls
+  - codeclimate-test-reporter < coverage/lcov.info
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
+before_deploy:
   - yarn build
-branches:
-  only:
-  - master
-
 deploy:
   provider: npm
   email: "$NPM_EMAIL"

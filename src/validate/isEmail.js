@@ -1,9 +1,7 @@
 /**
  * 判断是否是邮箱
- * @param {*} str 
+ * @param {string} value
  */
-const isEmail = function (str) {
-  return /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(str)
-}
+const isEmail = (value) => /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(value)
 
 export default isEmail

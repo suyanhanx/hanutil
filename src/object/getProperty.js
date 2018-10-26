@@ -4,6 +4,8 @@
  * @param {*} path 路径
  */
 
+import isDef from './isDef'
+
 const get = (object, path) => {
   const keys = path.split('.')
   let result = object

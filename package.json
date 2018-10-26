@@ -1,19 +1,20 @@
 {
   "name": "hanutil",
   "description": "A JavaScript common utils",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": "suyan",
   "license": "MIT",
-  "main": "./dist/utils.min.js",
-  "module": "./src/index.js",
+  "main": "dist/hanutil.min.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/suyanhanx/hanutil.git"
   },
   "homepage": "https://github.com/suyanhanx/hanutil",
   "scripts": {
-    "bundle": "webpack --mode=development --progress --hide-modules",
-    "build": "cross-env NODE_ENV=production webpack --mode=production --progress --hide-modules"
+    "bundle": "cross-env NODE_ENV=development webpack --mode=development --progress --hide-modules",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "test": "karma start script/karma.conf.js"
   },
   "dependencies": {},
   "browserslist": [
@@ -24,9 +25,19 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-istanbul": "^5.1.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.0.5",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-power-assert": "^1.0.0",
+    "karma-webpack": "^4.0.0-rc.2",
+    "mocha": "^5.2.0",
+    "power-assert": "^1.6.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.1"

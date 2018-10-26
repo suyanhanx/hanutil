@@ -3,8 +3,6 @@
  * @param {*} value 
  */
 
-const isDef = function (value) {
-  return value !== undefined && value !== null
-}
+const isDef = value => value !== undefined && value !== null
 
 export default isDef

@@ -4,7 +4,7 @@
 
 import deepAssign from './deepAssign'
 
-export default function deepClone(obj) {
+const deepClone = obj => {
   if (Array.isArray(obj)) {
     return obj.map(item => deepClone(item))
   } else if (typeof obj === 'object') {
@@ -12,3 +12,5 @@ export default function deepClone(obj) {
   }
   return obj
 }
+
+export default deepClone
