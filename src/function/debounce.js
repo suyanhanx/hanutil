@@ -4,7 +4,7 @@
  * @param delay 延迟
  * @returns {Function}
  */
-export default function debounce(func, delay) {
+const debounce = (func, delay) => {
   let timer
   return function (...args) {
     if (timer) {
@@ -15,3 +15,5 @@ export default function debounce(func, delay) {
     }, delay)
   }
 }
+
+export default debounce
