@@ -35,7 +35,9 @@ declare namespace hanutil {
 
   export function isPhoneNum(value: string): boolean
 
-  export function isTaxNum(value: string): boolean
+  export function isTaxNumber(value: string): boolean
+
+  export function isIdCard(value: string): boolean
 }
 
 declare module 'hanutil' {
