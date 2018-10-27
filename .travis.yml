@@ -8,7 +8,7 @@ after_success:
   - yarn add codeclimate-test-reporter coveralls codecov
   - codeclimate-test-reporter < coverage/lcov.info
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-  - codecov ./coverage/cobertura-coverage.xml
+  - codecov
 
 before_deploy:
   - yarn build
