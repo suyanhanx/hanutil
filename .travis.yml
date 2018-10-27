@@ -4,6 +4,10 @@ node_js:
 addons:
   chrome: stable
 
+cache:
+  directories:
+  - node_modules
+
 after_success:
   - yarn add codeclimate-test-reporter coveralls codecov
   - codeclimate-test-reporter < coverage/lcov.info
