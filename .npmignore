@@ -1,0 +1,10 @@
+docs/
+coverage/
+test/
+src/
+.travis.yml
+webpack.config.js
+yarn.lock
+.babelrc
+.editorconfig
+script/

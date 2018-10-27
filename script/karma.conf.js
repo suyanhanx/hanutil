@@ -65,6 +65,23 @@ module.exports = function (config) {
       // Would output the results into: .'/coverage/'
     },
 
+    coverageReporter: {
+      reporters: [
+        {
+          type: 'text-summary'
+        },
+        {
+          type: 'lcov',
+          dir: 'coverage/',
+          subdir: '.'
+        },
+        {
+          type: 'cobertura',
+          subdir: '.',
+          dir: 'coverage/'
+        }]
+    },
+
     port: 9876,
 
     colors: true,
