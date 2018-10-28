@@ -27,6 +27,16 @@ describe('object模块', function () {
       assert.deepEqual(personClone, person)
       assert.deepStrictEqual(personClone, person)
     })
+    it('deepClone normal return same', function () {
+      assert.equal(hanutil.deepClone(12), 12)
+    })
+    it('deepClone an Array with Object should the same', function () {
+      let personArray = [person]
+      let personClone = hanutil.deepClone(personArray)
+      assert.equal(personClone === personArray, false)
+      assert.deepEqual(personClone, personArray)
+      assert.deepStrictEqual(personClone, personArray)
+    })
   })
 
   describe('#isDef', function () {
