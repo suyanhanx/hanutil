@@ -2,11 +2,20 @@ declare namespace hanutil {
   /**
    * array
    */
-  export function arrayEquals(arr1: Array<any>, arr2: Array<any>): boolean
+  export function arrayEqual(arr1: Array<any>, arr2: Array<any>): boolean
 
   export function convertClass(obj: object): Array<any>
 
   export function isArray(obj: object): boolean
+
+  /**
+   * cookie
+   */
+  export function setCookie(name: string, value: string, time?: string): void
+
+  export function getCookie(name: string): string
+
+  export function removeCookie(name: string): void
 
   /**
    * function

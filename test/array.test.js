@@ -1,13 +1,13 @@
 describe('Array模块', function () {
   describe('#arrayEquals', function () {
     it('arrayEquals([1,2,3],[1,2,3]) should return true', function () {
-      assert(hanutil.arrayEquals([1, 2, 3], [1, 2, 3]))
+      assert(hanutil.arrayEqual([1, 2, 3], [1, 2, 3]))
     })
     it('arrayEquals([1],[1,2]) should return false', function () {
-      assert.equal(hanutil.arrayEquals([1], [1, 2]), false)
+      assert.equal(hanutil.arrayEqual([1], [1, 2]), false)
     })
     it('arrayEquals([1,2,3],[1,2,4]) should return false', function () {
-      assert.equal(hanutil.arrayEquals([1, 2, 3], [1, 2, 4]), false)
+      assert.equal(hanutil.arrayEqual([1, 2, 3], [1, 2, 4]), false)
     })
   })
   describe('#convertClass', function () {

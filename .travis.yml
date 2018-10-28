@@ -3,11 +3,17 @@ node_js:
   - 8
 addons:
   chrome: stable
+  firefox: latest
+
+cache:
+  directories:
+  - node_modules
 
 after_success:
-  - yarn add codeclimate-test-reporter coveralls
+  - yarn add codeclimate-test-reporter coveralls codecov
   - codeclimate-test-reporter < coverage/lcov.info
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - codecov
 
 before_deploy:
   - yarn build
