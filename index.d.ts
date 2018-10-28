@@ -9,6 +9,15 @@ declare namespace hanutil {
   export function isArray(obj: object): boolean
 
   /**
+   * cookie
+   */
+  export function setCookie(name: string, value: string, time?: string): void
+
+  export function getCookie(name: string): string
+
+  export function removeCookie(name: string): void
+
+  /**
    * function
    */
   export function debounce(func: () => void, delay: number): void
