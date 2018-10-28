@@ -32,12 +32,11 @@ const getSecond = str => {
   let count = params[1]
   let unit = params[2]
 
-  if (unit === 's' || unit === undefined) {
-    return count * 1000
-  } else if (unit === 'h') {
-    return count * 60 * 60 * 1000
-  } else if (unit === 'd') {
-    return count * 24 * 60 * 60 * 1000
+  switch (unit) {
+    case undefined:
+    case 's' : return count * 1000
+    case 'h' : return count * 60 * 60 * 1000
+    case 'd' : return count * 24 * 60 * 60 * 1000
   }
 }
 
