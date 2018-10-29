@@ -8,3 +8,4 @@ yarn.lock
 .babelrc
 .editorconfig
 script/
+*.log
