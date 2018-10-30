@@ -47,6 +47,8 @@ declare namespace hanutil {
   export function isTaxNumber(value: string): boolean
 
   export function isIdCard(value: string): boolean
+
+  export function isCarNumber(value: string): boolean
 }
 
 declare module 'hanutil' {
