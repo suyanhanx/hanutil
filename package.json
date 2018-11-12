@@ -13,7 +13,7 @@
   "homepage": "https://github.com/suyanhanx/hanutil",
   "scripts": {
     "bundle": "cross-env NODE_ENV=development node script/build-bundle",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build": "cross-env NODE_ENV=production node script/build",
     "test": "karma start script/karma.conf.js"
   },
   "dependencies": {},
