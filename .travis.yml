@@ -19,7 +19,7 @@ before_install:
   - git push --force --quiet "http://${GH_TOKEN}@${GH_REF}" master:master
 
 after_success:
-  - yarn add codeclimate-test-reporter coveralls codecov
+  - npm i --no-save codeclimate-test-reporter coveralls codecov
   - codeclimate-test-reporter < coverage/lcov.info
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   - codecov
