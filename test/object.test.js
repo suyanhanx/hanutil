@@ -55,6 +55,9 @@ describe('object模块', function () {
     it('getProperty(person, "car.model") should return "ModelX"', function () {
       assert.deepEqual(hanutil.getProperty(person, 'car.model'), 'ModelX')
     })
+    it('try to get a undefined property return empty', function () {
+      assert.equal(hanutil.getProperty(person,'car.engine'), '')
+    })
   })
 
 

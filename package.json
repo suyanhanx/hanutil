@@ -1,7 +1,7 @@
 {
   "name": "hanutil",
   "description": "A JavaScript common utils",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "suyan",
   "license": "MIT",
   "main": "dist/hanutil.min.js",
@@ -12,8 +12,8 @@
   },
   "homepage": "https://github.com/suyanhanx/hanutil",
   "scripts": {
-    "bundle": "cross-env NODE_ENV=development webpack --mode=development --progress --hide-modules",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "bundle": "cross-env NODE_ENV=development node script/build-bundle",
+    "build": "cross-env NODE_ENV=production node script/build",
     "test": "karma start script/karma.conf.js"
   },
   "dependencies": {},
@@ -28,6 +28,8 @@
     "babel-plugin-istanbul": "^5.1.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
+    "chalk": "^2.4.1",
+    "copy": "^0.3.2",
     "cross-env": "^5.0.5",
     "karma": "^3.1.1",
     "karma-chrome-launcher": "^2.2.0",
@@ -38,6 +40,7 @@
     "karma-power-assert": "^1.0.0",
     "karma-webpack": "^4.0.0-rc.2",
     "mocha": "^5.2.0",
+    "ora": "^3.0.0",
     "power-assert": "^1.6.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.16.1",

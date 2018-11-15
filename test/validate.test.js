@@ -35,4 +35,14 @@ describe('validate模块', function () {
       assert(hanutil.isTaxNumber('310115772133604'))
     })
   })
+
+  describe('#isCarNumber', function() {
+    it('isCarNumber("沪AX2345") should true', function () {
+      assert(hanutil.isCarNumber('沪AX2345'))
+    })
+
+    it('isCarNumber("沪AX235") should false', function () {
+      assert.equal(hanutil.isCarNumber('沪AX235'), false)
+    })
+  })
 })
