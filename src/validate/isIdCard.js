@@ -28,7 +28,7 @@ let checkDate = val => {
     let month = val.substring(4, 6)
     let date = val.substring(6, 8)
     let date2 = new Date(year + "-" + month + "-" + date)
-    if (date2 && date2.getMonth() == (parseInt(month) - 1)) {
+    if (date2.getMonth() == (parseInt(month) - 1)) {
       return true
     }
   }
