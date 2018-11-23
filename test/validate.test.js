@@ -35,12 +35,20 @@ describe('validate模块', function () {
       assert.equal(hanutil.isPhoneNum('12345678910'), false)
     })
 
-    it('isPhoneNum(18845678910) should return false', function () {
+    it('isPhoneNum(18845678910) should return true', function () {
       assert(hanutil.isPhoneNum('18845678910'))
     })
 
-    it('isPhoneNum(18845678910) number should return false', function () {
+    it('isPhoneNum(18845678910) number should return true', function () {
       assert(hanutil.isPhoneNum(18845678910))
+    })
+
+    it('isPhoneNum(8618845678910) number should return true', function () {
+      assert(hanutil.isPhoneNum('8618845678910'))
+    })
+
+    it('isPhoneNum(+08618845678910) number should return true', function () {
+      assert(hanutil.isPhoneNum('+08618845678910'))
     })
   })
 
