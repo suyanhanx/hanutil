@@ -12,6 +12,19 @@ describe('validate模块', function () {
     it('isIdCard(123456789123456789) should return false', function () {
       assert.equal(hanutil.isIdCard('123456789123456789'), false)
     })
+
+    it('日期错误的身份证号 isIdCard(110105194902310026) should return false', function () {
+      assert.equal(hanutil.isIdCard('110105194902310026'), false)
+    })
+
+    it('校验码错误的身份证号 isIdCard(110105194912310021) should return false', function () {
+      assert.equal(hanutil.isIdCard('110105194912310021'), false)
+    })
+
+    it('省份错误的身份证号 isIdCard(160105194912310029) should return false', function () {
+      assert.equal(hanutil.isIdCard('160105194912310029'), false)
+    })
+
     it('isIdCard("230603197702061497") should return true', function () {
       assert(hanutil.isIdCard('230603197702061497'))
     })
@@ -21,9 +34,11 @@ describe('validate模块', function () {
     it('isPhoneNum(12345678910) should return false', function () {
       assert.equal(hanutil.isPhoneNum('12345678910'), false)
     })
+
     it('isPhoneNum(18845678910) should return false', function () {
       assert(hanutil.isPhoneNum('18845678910'))
     })
+
     it('isPhoneNum(18845678910) number should return false', function () {
       assert(hanutil.isPhoneNum(18845678910))
     })
@@ -43,6 +58,10 @@ describe('validate模块', function () {
 
     it('isCarNumber("沪AX235") should false', function () {
       assert.equal(hanutil.isCarNumber('沪AX235'), false)
+    })
+
+    it('isCarNumber("") should false', function () {
+      assert.equal(hanutil.isCarNumber(''), false)
     })
   })
 })
