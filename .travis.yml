@@ -18,12 +18,6 @@ before_install:
   - git commit -m "change updated"
   - git push --force --quiet "http://${GH_TOKEN}@${GH_REF}" master:master
 
-after_success:
-  - npm i --no-save codeclimate-test-reporter coveralls codecov
-  - codeclimate-test-reporter < coverage/lcov.info
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-  - codecov
-
 before_deploy:
   - yarn build
 
@@ -34,4 +28,14 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+
+after_script:
+  - yarn add codeclimate-test-reporter coveralls codecov
+  - codeclimate-test-reporter < coverage/lcov.info
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - codecov
+
+notifications:
+  email: false
+
 

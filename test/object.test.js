@@ -14,9 +14,17 @@ describe('object模块', function () {
       assert.deepEqual(hanutil.deepAssign(null, null), null)
       assert.deepEqual(hanutil.deepAssign(null, undefined), null)
     })
+
     it('undefined deepAssign object should return undefined', function () {
       assert.deepEqual(hanutil.deepAssign(undefined, {}), undefined)
       assert.deepEqual(hanutil.deepAssign(undefined, null), undefined)
+    })
+
+    it('merge two object', function () {
+      assert.deepStrictEqual(hanutil.deepAssign(
+        {name: 'Tom', car: {brand: 'TESLA',}},
+        {age: 27, car: {model: 'ModelX'}}
+        ), person)
     })
   })
 

@@ -5,6 +5,7 @@
  * 源自 https://juejin.im/post/5aa8d89af265da23866f9669
  */
 
+// 检测校验码
 const checkCode = val => {
   let p = /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/
   let factor = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
@@ -21,6 +22,8 @@ const checkCode = val => {
   }
   return false
 }
+
+// 检测出生日期
 let checkDate = val => {
   let pattern = /^(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)$/
   if (pattern.test(val)) {
@@ -28,12 +31,14 @@ let checkDate = val => {
     let month = val.substring(4, 6)
     let date = val.substring(6, 8)
     let date2 = new Date(year + "-" + month + "-" + date)
-    if (date2 && date2.getMonth() == (parseInt(month) - 1)) {
+    if (date2.getMonth() == (parseInt(month) - 1)) {
       return true
     }
   }
   return false
 }
+
+// 检测省份代码
 let checkProv = val => {
   let pattern = /^[1-9][0-9]/
   let provs = {
