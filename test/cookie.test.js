@@ -29,10 +29,16 @@ describe('Cookie模块',function () {
     before(function () {
       hanutil.setCookie('name', 'Tom')
     })
+
     it('after removeCookie should return null', function () {
       assert.equal(hanutil.getCookie('name'), 'Tom')
       hanutil.removeCookie('name')
       assert.equal(hanutil.getCookie('name'), null)
+    })
+
+    it('remove a undefined cookie should return null', function () {
+      hanutil.removeCookie('age')
+      assert.equal(hanutil.getCookie('age'), null)
     })
   })
 })

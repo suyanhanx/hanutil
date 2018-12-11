@@ -1,11 +1,19 @@
 describe('Array模块', function () {
   describe('#arrayEquals', function () {
+    it('arrayEquals two same ref array should return true', function () {
+      let test = [1, 2, 3]
+      let test2 = test
+      assert(hanutil.arrayEqual(test, test2))
+    })
+
     it('arrayEquals([1,2,3],[1,2,3]) should return true', function () {
       assert(hanutil.arrayEqual([1, 2, 3], [1, 2, 3]))
     })
+
     it('arrayEquals([1],[1,2]) should return false', function () {
       assert.equal(hanutil.arrayEqual([1], [1, 2]), false)
     })
+
     it('arrayEquals([1,2,3],[1,2,4]) should return false', function () {
       assert.equal(hanutil.arrayEqual([1, 2, 3], [1, 2, 4]), false)
     })
@@ -17,12 +25,15 @@ describe('Array模块', function () {
       assert.deepStrictEqual(hanutil.convertClass(''), [])
       assert.deepStrictEqual(hanutil.convertClass(0), [])
     })
+
     it(`convertClass('1 2 3 4') should return ['1', '2', '3', '4']`, function () {
       assert.deepStrictEqual(hanutil.convertClass('1 2 3 4'), ['1', '2', '3', '4'])
     })
+
     it('convertClass({a:1,b:2}) should return ["a","b"]', function () {
       assert.deepStrictEqual(hanutil.convertClass({a: 1, b: 2}), ['a', 'b'])
     })
+
     it('convertClass([1,2,3,4]) should return [1,2,3,4] (itself)', function () {
       assert.deepStrictEqual(hanutil.convertClass([1, 2, 3, 4]), [1, 2, 3, 4])
     })
