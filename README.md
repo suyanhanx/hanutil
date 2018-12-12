@@ -4,6 +4,7 @@
 ![Build Status](https://img.shields.io/travis/suyanhanx/hanutil/master.svg)
 [![Coverage Status](https://img.shields.io/coveralls/github/suyanhanx/hanutil/develop.svg)](https://coveralls.io/github/suyanhanx/hanutil?branch=develop)
 ![LICENSE MIT](https://img.shields.io/npm/l/hanutil.svg)
+![LGTM](https://img.shields.io/lgtm/grade/javascript/g/suyanhanx/hanutil.svg)
 
 ## 前端公共方法库
 
