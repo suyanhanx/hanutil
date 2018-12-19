@@ -1,7 +1,7 @@
 {
   "name": "hanutil",
   "description": "A JavaScript common utils",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "suyan",
   "license": "MIT",
   "main": "dist/hanutil.min.js",
