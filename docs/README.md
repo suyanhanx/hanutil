@@ -1,4 +1,4 @@
-# hanutils
+# hanutil
 
 [![npm](https://img.shields.io/npm/v/hanutil.svg)](https://www.npmjs.com/package/hanutil)
 ![Build Status](https://img.shields.io/travis/suyanhanx/hanutil/master.svg)
