@@ -13,8 +13,8 @@
 ## 引入方式
 可以完整引入整个包方便取用，也可以单独引入一个方法
 ``` javascript
-// 只引入部分方法('hautil/<方法名>')
-const isArray = require('hautil/isArray')
+// 只引入部分方法('hanutil/<方法名>')
+const isArray = require('hanutil/isArray')
 ```
 
 ## APIs
