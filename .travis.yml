@@ -9,15 +9,6 @@ cache:
   directories:
   - node_modules
 
-before_install:
-  - rm -rf .git
-  - git init
-  - git config user.name "Travis CI"
-  - git config user.email "no-reply@travis.org"
-  - git add .
-  - git commit -m "change updated"
-  - git push --force --quiet "http://${GH_TOKEN}@${GH_REF}" master:master
-
 before_deploy:
   - yarn build
 
