@@ -34,8 +34,8 @@ const isArray = require('hanutil/isArray')
 
 ### Function
 
-#### [debounce: &emsp; 判断两个数组是否相同][debounce]
-#### [throttle: &emsp; 判断两个数组是否相同][throttle]
+#### [debounce: &emsp; 函数防抖][debounce]
+#### [throttle: &emsp; 函数节流][throttle]
 
 ### Object
 
